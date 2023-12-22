@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS `mydb`.`user` (
+  `idUser` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) CHARACTER SET 'utf8mb3' NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `dob` VARCHAR(45) NOT NULL,
+  `phone` FLOAT NOT NULL,
+  `created_at` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idUser`, `name`, `email`, `password`, `dob`, `phone`, `created_at`),
+  UNIQUE INDEX `idUser_UNIQUE` (`idUser` ASC) VISIBLE,
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE,
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
